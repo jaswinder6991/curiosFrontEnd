@@ -42,7 +42,7 @@ const Home = () => {
       </div>
 
       <div className="m-14 mx-auto max-w-md px-4 sm:mt-20 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-26">
-        <DynamicComponentWithNoSSR api_key="3G6AD9" waitlist_link="http://192.168.1.11:3000/"/>
+        <DynamicComponentWithNoSSR api_key="3G6AD9" waitlist_link="https://curiosity.so/"/>
     
     {/* <style jsx>{`
       h1 {
