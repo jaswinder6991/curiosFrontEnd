@@ -1,7 +1,7 @@
-// import Layout from "../components/layout"
-// import $ from 'jquery'; 
+import Layout from "../components/layout"
+import $ from 'jquery'; 
 
-// const chatbox = () => {
+const chatbox = () => {
 //   function getBotResponse() {
 //     var rawText = $("#textInput").val();
 //     var userHtml = '<p class="userText"><span>' + rawText + "</span></p>";
@@ -73,6 +73,6 @@
 //   </Layout>
 // </>
 // )
-// }
+}
 
-// export default chatbox
+export default chatbox
