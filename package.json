@@ -11,13 +11,16 @@
     "@magic-sdk/admin": "1.0.0",
     "@tailwindcss/forms": "^0.3.2",
     "cookie": "0.4.0",
+    "jquery": "^3.6.0",
     "magic-sdk": "1.0.1",
     "next": "latest",
     "react": "latest",
     "react-dom": "latest",
-    "swr": "0.1.16"
+    "swr": "0.1.16",
+    "waitlistapi": "^0.6.2"
   },
   "license": "MIT",
+  "proxy": "http://localhost:5000",
   "devDependencies": {
     "autoprefixer": "^10.2.5",
     "postcss": "^8.2.10",
