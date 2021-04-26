@@ -21,7 +21,7 @@ const Home = () => {
           <span className="block text-indigo-500 xl:inline">asking questions?</span>
         </h2>
         <p className="mt-8 text-base text-gray-500 sm:mt-8 sm:text-lg sm:max-w-2xl sm:mx-auto md:mt-8 md:text-lg lg:text-centre">
-          Does having a conversation makes it easy for you to understand concepts better. Curiosity is a platform powered by GPT-3 where you can talk to a chatbot about tens of topics and catch up on them fast and easy.
+          Does having a conversation make it easy for you to understand concepts better. Curiosity is a platform powered by GPT-3 where you can talk to a chatbot about tens of topics and catch up on them fast and easy.
         </p>
         <p className="mt text-base text-gray-500 sm:mt sm:text-lg sm:max-w-xl sm:mx-auto md:mt md:text-lg lg:text-centre">
           Sign up for early access below to try it out!
