@@ -1,7 +1,7 @@
 {
   "name": "with-magic",
   "scripts": {
-    "dev": "next",
+    "dev": "NODE_OPTIONS='--inspect' next dev",
     "build": "next build",
     "start": "next start"
   },
@@ -14,7 +14,9 @@
     "jquery": "^3.6.0",
     "magic-sdk": "1.0.1",
     "next": "latest",
+    "openai-api": "^1.1.2",
     "react": "latest",
+    "react-chat-ui": "^0.4.0",
     "react-dom": "latest",
     "swr": "0.1.16",
     "waitlistapi": "^0.6.2"
