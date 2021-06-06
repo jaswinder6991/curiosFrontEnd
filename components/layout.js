@@ -8,7 +8,7 @@ const Layout = (props) => {
   const [isOpen, setIsOpen] = useState(false)
   const [isOpen1, setIsOpen1] = useState(false)
   return (
-    <>
+    <div className="containercomponent">
       <Head>
         <title>Curiosity</title>
         <link rel="icon" href="/favicon.ico" />
@@ -16,10 +16,10 @@ const Layout = (props) => {
 
       <Header />
       {/* <main class="relative bg-gray-100 md:min-h-screen -my-4 boverflow-hidden"> */}
-      <main>
-        <div className="container mx-auto">{props.children}</div>
+      <main className="chatcontainer">
+        <div className="chatbody">{props.children}</div>
       </main>
-</>
+</div>
 )
 }
 export default Layout
