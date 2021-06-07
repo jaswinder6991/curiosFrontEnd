@@ -8,19 +8,20 @@ export default async (req, res) => {
   let prompt_text =chat_log+`\n\nQ:${req.body.name}\nA:`;
   //log.console(prompt_text);
   //let prompt = `\n\nQ: ${req.search}\nA:`
-  const gptResponse = await openai.complete({
-    engine: 'curie',
-    prompt: prompt_text,
-    maxTokens: 50,
-    temperature: 0.4,
-    topP: 0.5,
-    presencePenalty: 0.8,
-    frequencyPenalty: 0.1,
-    bestOf: 1,
-    n: 1,
-    stop: ['\n']
-});
+//   const gptResponse = await openai.complete({
+//     engine: 'curie',
+//     prompt: prompt_text,
+//     maxTokens: 50,
+//     temperature: 0.4,
+//     topP: 0.5,
+//     presencePenalty: 0.8,
+//     frequencyPenalty: 0.1,
+//     bestOf: 1,
+//     n: 1,
+//     stop: ['\n']
+// });
 
-  res.status(200).json({text: `${gptResponse.data.choices[0].text}`})
+  // res.status(200).json({text: `${gptResponse.data.choices[0].text}`})
+  res.status(200).json({text: "This is a dummy response."})
 }
 

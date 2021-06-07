@@ -2,6 +2,7 @@ import { useUser } from '../lib/hooks'
 import Link from 'next/link'
 import Layout from '../components/layout'
 
+
 const Subjects = () => {
     return (
         <>
@@ -18,14 +19,14 @@ const Subjects = () => {
                 </div>
                 <div className="flex flex-wrap -m-4">
                 <div className="xl:w-1/4 md:w-1/2 p-4">
-                    {/* <Link href="/chat"> */}
+                    <Link href="/test">
                     <div className="bg-gray-100 hover:bg-gray-200 p-6 rounded-lg">
                     <img className="h-40 rounded w-full object-cover object-center mb-6" src="https://i.ibb.co/yRH8h2Z/blog-carbon-Markets2.png" alt="content"/>
                     {/* <h3 className="tracking-widest text-indigo-500 text-xs font-medium title-font">SUBTITLE</h3> */}
                     <h2 className="text-lg text-gray-900 font-medium title-font mb-4">Carbon markets</h2>
                     <p className="leading-relaxed text-base">Understand carbon markets by talking about them. Coming soon!</p>
                     </div>
-                    {/* </Link> */}
+                    </Link>
                 </div>
                 <div className="xl:w-1/4 md:w-1/2 p-4">
                     <div className="bg-gray-100 hover:bg-gray-200 p-6 rounded-lg">

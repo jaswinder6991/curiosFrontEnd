@@ -1,70 +1,5 @@
-// import Head from "next/head";
-// //import styles from "../styles/Home.module.css";
-// import { useState, useEffect } from 'react';
-// import Layout from "../components/layout";
-
-// export default function Home() {
-//   const [data, setData] = useState( { text:'' });
-//   const [query, setQuery] = useState();
-//   const [search, setSearch] = useState();
-//   const [isLoading, setIsLoading] = useState(false);
-//   const [receivedMessages, setMessages] = useState([]);
-
-//   useEffect(() => {
-//     const fetchData = async () => {
-//       if (search) {
-//       setIsLoading(true);
-//       const res = await fetch(`/api/openai`, {
-//         body: JSON.stringify({
-//           name: search
-//         }),
-//         headers: {
-//           'Content-Type': 'application/json'
-//         },
-//         method: 'POST'
-//       })
-//       const data = await res.json();
-//       setData(data);
-//       setMessages(data.text)
-//       setIsLoading(false);
-//     }};
-
-//     fetchData();
-//   }, [search]);
-//   return (
-//     <Layout>
-//    <div className="border-solid rounded-sm shadow-md">
-//       <div className="block bg-white rounded px-8 pt-6 pb-8 mb-4">
-        
-//       </div>
-//       {isLoading ? (
-//             <div>Typing ...</div>
-//          ) : (
-//            <>
-//            <span>
-//               {search}
-//            </span>
-//            <span>
-//            {data.text}
-//            </span>
-//            </>
-//            )}
-//       <input type="text" value={query} onChange={event => setQuery(event.target.value)}/>
-//         <button className="bg-indigo-500 hover:bg-indigo-600 text-white font-bold pl-2 py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button" onClick={() =>setSearch(query)}>
-//           Send
-//         </button>
-
-//         <form onSubmit={sendMessage}>
-//           <input value={formValue} onChange={(e) => setFormValue(e.target.value)} placeholder="say something nice" />
-
-//           <button type="submit" disabled={!formValue}>Send</button>
-
-//         </form>  
-//     </div>
-//     </Layout>
-//   );
-// }
 import React, { useState, useEffect, useRef } from "react";
+import { useUser } from '../lib/hooks'
 import ReactDOM from "react-dom";
 import uuid from "uuid";
 import Layout from "../components/layout";
@@ -88,6 +23,10 @@ const Messages = ({ messages }) => {
 };
 
 function App() {
+  
+  //commenting out auth for chat page until dev is done.
+  //useUser({ redirectTo: '/login' })
+  
   const [messages, setMessages] = useState([]);
   const [data, setData] = useState( { text:'' });
   const [query, setQuery] = useState();
