@@ -88,26 +88,26 @@ const Messages = ({ messages, currentUser }) => {
     </div>
   );
 };
+
 const RenderMessage = ({ message: { text, user }, currentUser }) => {
   console.log("halalala", user, text);
   return user == "user" ? (
     <div className="messageContainer justifyend">
-      <p className="sentText pr-5">{user}</p>
       <div className="messageBox-bgblue">
         <p className="messageText colorWhite">{text}</p>
       </div>
     </div>
   ) : (
     <div className=" messageContainer justifystart">
+      <img className="h-8 w-auto sm:h-10 chatSenderImage" src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"/>
       <div className="messageBox-bglight">
         {text ? <p className="messageText colorDark">{text}</p> : null}
       </div>
-      <p className="sentText pl-5">{user}</p>
     </div>
   );
 };
 function App() {
-  const [messages, setMessages] = useState([{ text: "", user: "" }]);
+  const [messages, setMessages] = useState([{ text: "Hello! Ask away", user: "bot" }]);
   const [data, setData] = useState({ text: "" });
   const [query, setQuery] = useState();
   const [search, setSearch] = useState();
@@ -118,6 +118,7 @@ function App() {
     e.preventDefault();
     setSearch(query);
     setMessages((m) => [...m, { text: query, user: "user" }]);
+    setQuery('');
   };
 
   const handleChange = (e) => {
@@ -152,25 +153,34 @@ function App() {
   return (
     <Layout>
       <div className="App">
-        {/* <form onSubmit={addMessages}> */}
-        <form className="form" onSubmit={addMessages}>
-          <Messages messages={messages} currentUser={currentUser} />
-          {/* <input className="shadow appearance-none border rounded w-auto py-2 px-3 text-gray-700 leading-tight 
-    focus:outline-none focus:shadow-outline" type="text" value={query} onChange={event => setQuery(event.target.value)}/> */}
-          <div className="formfooter">
-            <input
-              placeholder="Type a message..."
-              className="inputarea"
-              type="text"
-              value={query}
-              onChange={handleChange}
-            />
-            {/* <button className="addButton"onClick={addMessages}> */}
-            <button className="submitbtn" type="submit">
-              Send
-            </button>
-          </div>
-        </form>
+        <div className="textDiv">
+          <h1 className="textDivHeading">This is sample Lorem Ipsum Heading </h1>
+          <p className="textDivPara">This is sample Lorem Ipsum. This is sample Lorem Ipsum. This is sample Lorem Ipsum. This is sample Lorem Ipsum. This is sample Lorem Ipsum. </p>
+          <p className="textDivPara">This is sample Lorem Ipsum. This is sample Lorem Ipsum. This is sample Lorem Ipsum. This is sample Lorem Ipsum. This is sample Lorem Ipsum. </p>
+        </div>
+          <div className="chatBoxDiv">
+          <form className="form" onSubmit={addMessages}>
+            <Messages messages={messages} currentUser={currentUser} />
+            {/* <input className="shadow appearance-none border rounded w-auto py-2 px-3 text-gray-700 leading-tight 
+      focus:outline-none focus:shadow-outline" type="text" value={query} onChange={event => setQuery(event.target.value)}/> */}
+            <div className="formfooter">
+              <input
+                placeholder="Type a message..."
+                className="inputarea"
+                type="text"
+                value={query}
+                onChange={handleChange}
+              />
+              {/* <button className="addButton"onClick={addMessages}> */}
+              <button className="submitbtn" type="submit">
+                Send
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+                  <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+                </svg>
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
       <style>{`
     .App {
