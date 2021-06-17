@@ -7,13 +7,13 @@
   flex-grow: 1;
 }
 .chatbody {
-  height: 95%;
+  height: 92%;
   margin: auto;
 }
 .App {
   height: 98%;
   display: flex;
-  margin: 20px;
+  margin: 20px 60px;
   background-color: #efefef;
   border-radius: 6px;
 }
@@ -36,13 +36,15 @@
 }
 .formfooter {
   display: flex;
+  background-color: white;
+  align-items: center;
+  justify-content: space-between;
 }
 .inputarea {
-  border: none;
-  border-top: 2px solid #d3d3d3;
-  border-radius: 0;
+  border: 2px solid #d3d3d3;
+  border-radius: 0px 0px 20px 20px;
   padding: 2vh;
-  width: 80%;
+  width: 91%;
   font-size: 1.2em;
 }
 
@@ -54,15 +56,12 @@ select:focus {
 
 .submitbtn {
   color: #fff !important;
-  text-transform: uppercase;
-  text-decoration: none;
   background: #5345d4;
-  padding: 2vh;
+  padding: 10px;
   display: flex;
-  border: none;
-  width: 20%;
-  justify-content: space-around;
   align-items: center;
+  border-radius: 50%;
+  height: fit-content;
 }
 .justifystart {
   display: flex;
