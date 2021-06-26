@@ -12,7 +12,6 @@
 }
 .App {
   height: 98%;
-  display: flex;
   margin: 20px 60px;
   background-color: #efefef;
   border-radius: 6px;
@@ -20,14 +19,14 @@
 .messagesWrapper {
   display: flex;
   flex-direction: column;
-
   width: auto;
   height: 100px;
   flex-grow: 1;
-  overflow: scroll;
   margin-top: 1rem;
+  overflow: hidden;
   border: none;
 }
+
 .form {
   display: flex;
   flex-direction: column;
@@ -39,10 +38,12 @@
   background-color: white;
   align-items: center;
   justify-content: space-between;
+  border-bottom: 2px solid #d3d3d3;
+  border-right: 2px solid #d3d3d3;
 }
+
 .inputarea {
-  border: 2px solid #d3d3d3;
-  border-radius: 0px 0px 20px 20px;
+  border: none;
   padding: 2vh;
   width: 91%;
   font-size: 1.2em;
@@ -139,16 +140,17 @@ select:focus {
 }
 
 .textDiv {
-  /* background-image: url('bg.jpeg'); */
-  max-width: 60%;
-  margin-right: 30px;
-  margin-left: 10%;
+  max-width: 52%;
+  margin-right: 2%;
+  margin-left: 8%;
   text-align: left;
+  float: left;
 }
 
 .chatBoxDiv {
-  max-width: 40%;
-  min-width: 35%
+  width: 38%;
+  height: 100%;
+  float: left;
 }
 
 .textDivHeading {
@@ -165,4 +167,44 @@ select:focus {
   font-size: 20px;
   font-weight: 400;
   font-family: system-ui;
+}
+
+
+@media only screen and (max-width:800px) {
+  /* For tablets: */
+  .textDiv {
+    display: none;
+  }
+  .chatBoxDiv {
+    width: 100%;
+  }
+
+  .App {
+    margin: 0px;
+    height: 100%;
+  }
+
+  .chatbody {
+    margin: 0px;
+    height: 100%;
+  }
+}
+@media only screen and (max-width:500px) {
+  /* For mobile phones: */
+  .textDiv {
+    display: none;
+  }
+  .chatBoxDiv {
+    width: 100%;
+  }
+
+  .App {
+    margin: 0px;
+    height: 100%;
+  }
+
+  .chatbody {
+    margin: 0px;
+    height: 100%;
+  }
 }
