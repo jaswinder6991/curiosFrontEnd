@@ -19,7 +19,7 @@ const Subjects = () => {
                 </div>
                 <div className="flex flex-wrap -m-4">
                 <div className="xl:w-1/4 md:w-1/2 p-4">
-                    <Link href="/test">
+                    <Link href="/test?subject=carbon">
                     <div className="bg-gray-100 hover:bg-gray-200 p-6 rounded-lg">
                     <img className="h-40 rounded w-full object-cover object-center mb-6" src="https://i.ibb.co/yRH8h2Z/blog-carbon-Markets2.png" alt="content"/>
                     {/* <h3 className="tracking-widest text-indigo-500 text-xs font-medium title-font">SUBTITLE</h3> */}

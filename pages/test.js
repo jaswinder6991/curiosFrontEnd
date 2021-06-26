@@ -158,7 +158,7 @@ function App() {
           <p className="textDivPara">This is sample Lorem Ipsum. This is sample Lorem Ipsum. This is sample Lorem Ipsum. This is sample Lorem Ipsum. This is sample Lorem Ipsum. </p>
           <p className="textDivPara">This is sample Lorem Ipsum. This is sample Lorem Ipsum. This is sample Lorem Ipsum. This is sample Lorem Ipsum. This is sample Lorem Ipsum. </p>
         </div>
-          <div className="chatBoxDiv">
+        <div className="chatBoxDiv">
           <form className="form" onSubmit={addMessages}>
             <Messages messages={messages} currentUser={currentUser} />
             {/* <input className="shadow appearance-none border rounded w-auto py-2 px-3 text-gray-700 leading-tight 
@@ -199,7 +199,8 @@ function App() {
      
       width: auto;
       height: 100px;
-      overflow: scroll;
+      overflow-y: scroll;
+      overflow-x: hidden;
       margin-top: 1rem;
     }
     `}</style>
